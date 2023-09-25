@@ -1,0 +1,98 @@
+
+.barChart-container {
+    display: flex;
+    flex-flow: row nowrap;
+    
+    justify-content: center;
+}
+
+.bar-chart {
+    width: 70%;
+    justify-content: space-around;
+
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+    
+    border-radius: 20px;
+    padding: 24px 24px 12px 24px;
+
+    background-color: #ffffff;
+}
+
+.whole-bar {
+    stroke-linecap: round;
+    shape-rendering: geometricPrecision;
+    /* stroke: #E2FAFE; */
+    stroke: #F5F1FA;
+    stroke-width: 10.8;
+}
+
+.title-statistic {
+    /* text-anchor: start;
+    alignment-baseline: baseline; */
+    fill: #00002A;
+    font-size: 1em;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    margin: 0;
+    padding: 8px 16px 4px 24px;
+}
+
+.date-statistic {
+    text-anchor: start;
+    alignment-baseline: baseline;
+    fill: #00002A;
+    font-size: 0.80em;
+    font-weight: 300;
+
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0px 24px;
+}
+
+.bar-done {
+    fill: none;
+    /* stroke: #01D5FB; */
+    stroke: #FEE95C;
+    stroke-width: 6.8;
+    stroke-linecap: round;
+
+    animation: progress 0.5s ease-out forwards;
+    transform: scale(1, -1); 
+    transform-origin: center;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.valueY {
+    text-anchor: middle;
+    alignment-baseline: middle;
+    fill: #00002A;
+    font-size: 0.4em;
+    font-weight: 500;
+}
+
+.valueX {
+    text-anchor: middle;
+    alignment-baseline: middle;
+    fill: #00002A;
+    font-size: 0.32em;
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+
+
+
+.yaxis-line {
+    stroke-dasharray: 2;
+    stroke:#00002A;
+    stroke-width: 0.4;
+    /* shape-rendering:crispEdges; */
+    shape-rendering: optimizeSpeed;
+}

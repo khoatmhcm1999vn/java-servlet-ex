@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+.watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 240px;
+  width: 240px;
+
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.controls-watch {
+	margin: 16px auto 8px;
+	width: 64px;
+	height: 64px;
+}
+
+#startTodoModal .time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 48px;
+}
+
+#star, #stop {
+	display: block;
+	margin: auto;
+	height: 64px;
+	width: 64px;
+	background: transparent;
+	color: black;
+}
+
+#start {
+  display: block;
+}
+
+#stop {
+  display: none;
+}
+
+#playButton {
+	display: block;
+}
+
+#pauseButton {
+	display: none;
+}
+

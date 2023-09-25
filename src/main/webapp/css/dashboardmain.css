@@ -1,0 +1,116 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 432px auto 400px;
+    grid-template-rows: 45px 64px auto;
+
+    grid-template-areas:    "navbar navbar navbar"
+                            "tags buttons right-content"
+                            "center-content center-content right-content";
+}
+
+.navbar-container {
+    grid-area: navbar;
+}
+
+
+.center-content {
+    display: block;
+    grid-area: center-content;
+    
+    height: calc(100vh - 45px - 64px - 8px);
+
+    padding: 8px 16px 0px 16px;
+    
+
+    overflow-x: hidden;
+
+    overflow-y: scroll;
+}
+
+.tags-container {
+    grid-area: tags;
+    width: 100%;
+
+    height: fit-content;
+    margin: 8px 16px 8px 16px;
+
+    display: grid;
+    grid-template-columns: 100px 300px;
+}
+
+h2.title-tags {
+    
+    padding: 16px 8px 16px 0px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1A0E2A;
+}
+
+.tags-inner-container {
+    width: 100%;
+    /* display: block; */
+    /* grid-area: tags;
+    width: 100%;
+    margin: 8px 16px 0px 16px;
+
+    overflow-y: auto; */
+}
+
+
+.buttons-container {
+    grid-area: buttons;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right-content {
+    grid-area: right-content;
+
+    padding: 8px 16px;
+}
+
+.deadlines-container {
+    /* padding: 8px 4px; */
+    height: calc(100vh - 45px - 144px - 8px - 52px - 8px);
+
+    background-color: #ffffff;
+
+    /* overflow-x: scroll; */
+    
+    border-radius: 10px;
+    border: 16px #ffffff solid;
+
+    /* margin-top: 16px; */
+    
+    /* padding: 4px; */
+
+    overflow-x: hidden;
+
+    overflow-y: scroll;
+
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+}
+
+h2.title-deadlines {
+    padding: 16px 32px 16px 32px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1A0E2A;
+}
+
+
+/* 4 btn: Add todo, edit todo, add tag, edit tag */
+
+/* a#btn-open-addTodoModal {
+    background: #FACA08;
+}
+
+a#btn-open-addTagModal {
+    background-color: #D06DF8;
+} */
+
+
+
