@@ -23,7 +23,7 @@ public class PasswordUtils {
 	private static final String ALGORITHM = "PBKDF2WithHmacSHA256";
 	private static byte[] ivBytes;
 
-	public static Optional<String> generateSalt (final int length) {
+	public static Optional<String> generateSalt(final int length) {
 		if (length < 1) {
 			System.err.println("error in generateSalt: length must be > 0");
 			return Optional.empty();
@@ -35,7 +35,7 @@ public class PasswordUtils {
 	    return Optional.of(Base64.getEncoder().encodeToString(salt));
 	}
 
-	public static Optional<String> hashPassword (String password, String salt) {
+	public static Optional<String> hashPassword(String password, String salt) {
 		char[] chars = password.toCharArray();
 		byte[] bytes = salt.getBytes();
 
@@ -47,11 +47,9 @@ public class PasswordUtils {
 			SecretKeyFactory fac = SecretKeyFactory.getInstance(ALGORITHM);
 			byte[] securePassword = fac.generateSecret(spec).getEncoded();
 			return Optional.of(Base64.getEncoder().encodeToString(securePassword));
-
 		} catch (NoSuchAlgorithmException | InvalidKeySpecException ex) {
 			System.err.println("Exception encountered in hashPassword()");
 			return Optional.empty();
-
 		} finally {
 			spec.clearPassword();
 		}

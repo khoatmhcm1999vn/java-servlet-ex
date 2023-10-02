@@ -28,7 +28,7 @@ public class Tag {
 	protected String color;
 	
 	@OneToMany(mappedBy="tag")
-	protected List <Todo> todos;
+	protected List<Todo> todos;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
