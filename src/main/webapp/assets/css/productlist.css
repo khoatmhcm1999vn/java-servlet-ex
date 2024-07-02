@@ -1,0 +1,97 @@
+body {
+    background-image: none;
+    background-color: white;
+}
+
+.productlist {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 130px auto;
+}
+
+.productlist {
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.productlist td,
+.productlist th {
+    padding: 8px;
+    padding: .5rem;
+}
+
+.productlist th {
+    text-align: left;
+    font-weight: 300;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+.productlist td {
+    font-family: 'Avenir Next', 'Segoe UI', 'Lucida Grande', sans-serif;
+}
+
+.productlist .table {
+    width: 100%;
+    padding: 16px;
+    padding: 1rem;
+}
+
+.productlist .table__heading {
+    border-bottom: 2px solid #FFC842;
+}
+
+@media (max-width: 32rem) {
+    .table__heading {
+        display: none;
+    }
+    .table__content {
+        display: block;
+        padding: .3rem 0;
+    }
+    .table__row {
+        margin: .25rem 1rem;
+        padding: .5rem 0;
+        display: block;
+        border-bottom: 2px solid #FFC842;
+    }
+    .table__content:before {
+        content: attr(data-heading);
+        display: inline-block;
+        width: 5rem;
+        margin-right: .5rem;
+        color: #999;
+        font-size: .75rem;
+        font-weight: 700;
+        font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+.productlist h1 {
+    margin: 50px auto 50px auto;
+    text-align: center;
+}
+
+.productlist h4 {
+    float: right;
+    text-align: center;
+}
+
+.productlist h4 a {
+    color: orange;
+}
+
+.productlist h4 a:hover {
+    color: palevioletred;
+}
+
+.productlist .table__content a {
+    color: #519ABA;
+}
+
+.productlist .table__content a:hover {
+    color: #C3602C;
+}

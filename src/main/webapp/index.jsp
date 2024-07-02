@@ -1,159 +1,106 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@page import="model.*"%>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="ISO-8859-1">
-	<title>Insert title here</title>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ include file="jsp-header.jsp"%>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/body.css">
-    
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/form.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/mymodal.css">
-    
-    <style type="text/css">
-    	body {
-    		padding: 12px;
-    		display: grid;
-    		grid-template-columns: 50% 50%;
-    		
-    		background-image: url("${pageContext.request.contextPath}/assets/background1.png");
-    		
-    		
-    	}
-    	.login-form {
-    		display: inline-block;
-    		height: fit-content;
-    		min-height: 630px;
-    		width: 100%;
-    		//padding: 28px;
-    		padding: 20% 5%;
-    		background: white;
-    	}
-    	
-    	.login-form h3 {
-    		display: block;
-    		text-align: center;
-    		
-    		font-size: 32px;
-    		
-    		margin-bottom: 24px;
-    		//letter-spacing: 3px;
-    	}
-    	
-    	.login-form form {
-    		margin: auto;
-    		width: 50%;
-    	}
-    	
-    	input[type=submit].btn-submit-on-form {
-    		margin: 8px 0px;
-    		padding: 12px 0px;
-    		width: 100%;
-    		border-radius: 0%;
-    		
-    	}
-    	
-    	.right-decor {
-    		display: inline-block;
-    		//background-image: url("${pageContext.request.contextPath}/assets/background1.png");
-    		
-    		background-color: #B500D8;	
-    		background-image: 
-		        -webkit-linear-gradient(
-		            45deg,
-		            rgba(255, 255, 255, .2) 25%,
-					transparent 25%,
-		            transparent 50%, 
-		            rgba(255, 255, 255, .2) 50%,
-		            rgba(255, 255, 255, .2) 75%,
-		            transparent 75%,
-		            transparent);
-    		
-    		padding: 5% 10%;
-    		
-    		line-height: 1.5;
-    		
-    		color: white;
-    		
-    		min-height: 630px;
-    		
-    	}
-    	
-    	.right-decor h3 {
-    		font-size: 32px;
-    		padding: 8px;
-    		
-    	}
-    	
-    	.right-decor p {
-    		font-size: 18px;
-    		padding: 8px 8px 8px 8px;
-    	}
-    	
-    	.right-decor a {
-    		display: block;
-    		margin: auto;
-    		width: 50%;
-    		
-    		padding: 12px 24px;
-    		background: white;
-    		color: black;
-    		text-align: center;
-    		
-    		font-weight: 500;
-    		
-    	}
-    	
-    	.link-in-index {
-    		margin: auto;
-    		width: 80%;
-    	}
-    	
-    	.link-in-index a {
-    		display: block;
-    		margin: 12px auto;
-    		width: 50%;
-    		
-    		padding: 16px 24px;
-    		background: white;
-    		color: black;
-    		text-align: center;
-    		
-    		font-weight: 500;
-    		
-    	}
-    </style>
-    
-</head>
-<body >
-<%
-    User user = (User)session.getAttribute("user");
-    if(user != null ){ %>
-    <jsp:forward page="error.jsp"/>
-    <% }%>
-    
-<% 
-	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); 
-	response.setHeader("pragma ", "no-cache");
-%>
-
-	<div class="right-decor">
-    	<h3>Welcome to Todo App</h3>
-    	<p>Having a list of all your tasks will allow you to sit down and make a plan. One study showed that fifteen minutes spent planning could save an hour of execution time!</p>
-    	
-    	<img src="${pageContext.request.contextPath}/assets/3 SCENE.svg">
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Săn khuyến mãi</h1>
+        <h2>Gà rán hiệu ông bà Khoa My</h2>
+        <a href="portfolio.jsp" class="btn-about">Đặt hàng ngay</a>
     </div>
-    
-    <div class="link-in-index">
-    	<a href="${pageContext.request.contextPath}/login.jsp">Login</a>
-		<a href="${pageContext.request.contextPath}/signup.jsp">Sign Up</a>
-		<a href="${pageContext.request.contextPath}/reset-password.jsp">Reset Password</a>
-    </div>
-    
-    
-</body>
-</html>
+</section>
+<!-- End Hero -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Món ăn bán chạy</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-box iconbox-blue">
+                        <a data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i>
+                            <h4>
+                                <img src="assets/img/portfolio/cbgr.jpg" class="icon" alt="" style="border-radius: 30px; height: 230px; width: 300px;">
+                                <p></p>
+                                <p>Combo gà rán một người</p>
+                                <p>84.000đ/phần</p>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box iconbox-orange ">
+                        <a data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i>
+                            <h4>
+                                <img src="assets/img/portfolio/kmga.PNG" class="icon" alt="" style="border-radius: 30px; height: 230px; width: 300px;">
+                                <p></p>
+                                <p>Combo gà sốt kem tiêu</p>
+                                <p>94.000đ/phần</p>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box iconbox-green ">
+                        <a data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i>
+                            <h4>
+                                <img src="assets/img/portfolio/comps.JPG" class="icon" alt="" style="border-radius: 30px; height: 230px; width: 300px;">
+                                <p></p>
+                                <p>Combo quẩy cùng pepsi</p>
+                                <p>100.000đ/phần</p>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box iconbox-red ">
+                        <a data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i>
+                            <h4>
+                                <img src="assets/img/portfolio/3mga.PNG" class="icon" alt="" style="border-radius: 30px; height: 230px; width: 300px;">
+                                <p></p>
+                                <p>Combo khuyến mãi 3 miếng gà</p>
+                                <p>79.000đ/phần</p>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box iconbox-green ">
+                        <a data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i>
+                            <h4>
+                                <img src="assets/img/portfolio/combo1vs1.jpg" class="icon" alt="" style="border-radius: 30px; height: 230px; width: 300px;">
+                                <p></p>
+                                <p>Combo mua 1 tặng 1</p>
+                                <p>127.000đ/phần</p>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box iconbox-red ">
+                        <a data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i>
+                            <h4>
+                                <img src="assets/img/portfolio/ktc.PNG" class="icon" alt="" style="border-radius: 30px; height: 230px; width: 300px;">
+                                <p></p>
+                                <p>Khoai tây chiên</p>
+                                <p>15.000đ/phần</p>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+
+<%@ include file="jsp-footer.jsp"%>

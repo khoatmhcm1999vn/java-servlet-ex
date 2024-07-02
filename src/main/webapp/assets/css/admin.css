@@ -1,0 +1,27 @@
+.activities al {
+    list-style-type: none;
+    padding: 150px 300px;
+    overflow: hidden;
+    border-radius: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    height: fit-content;
+}
+
+.activities all {
+    float: left;
+}
+
+.activities all a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 50px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+}
+
+.activities all a:hover {
+    transform: scale(1.3);
+}

@@ -1,0 +1,103 @@
+ .costumerbill {
+     background-color: #FDF2DE;
+     background-image: none;
+     padding: 110px 0px
+ }
+ 
+ .costumerbill h1 {
+     font-family: 'Courier New', Courier, monospace;
+     text-align: center;
+     font-size: 35px;
+     text-transform: uppercase;
+ }
+ 
+ .costumerbill h2 {
+     font-family: 'Courier New', Courier, monospace;
+     font-size: 20px;
+     text-transform: uppercase;
+ }
+ 
+ .costumerbill a {
+     background-color: #563D7C;
+     float: right;
+     text-align: center;
+     font-size: 30px;
+     color: #ffffff;
+     font-family: 'Courier New', Courier, monospace;
+     text-transform: uppercase;
+     padding: 5px 5px;
+     border-radius: 10px;
+ }
+ 
+ .costumerbill a:hover {
+     background-color: gray;
+     float: right;
+     text-align: center;
+     font-size: 30px;
+     color: #ffffff;
+     font-family: 'Courier New', Courier, monospace;
+     text-transform: uppercase;
+     padding: 5px 5px;
+     border-radius: 10px;
+ }
+ 
+ .responsive-table {
+     font-family: 'Courier New', Courier, monospace;
+     padding: 0px;
+ }
+ 
+ .responsive-table li {
+     border-radius: 3px;
+     padding: 25px 30px;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .table-header {
+     background-color: #ffffff;
+     font-size: 14px;
+     text-transform: uppercase;
+     letter-spacing: 0.03em;
+ }
+ 
+ .table-row {
+     background-color: #ffffff;
+     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .col-1 {
+     flex-basis: 30%;
+ }
+ 
+ .col-2 {
+     flex-basis: 20%;
+ }
+ 
+ .col-3 {
+     flex-basis: 25%;
+ }
+ 
+ .col-4 {
+     flex-basis: 25%;
+ }
+ 
+ @media all and (max-width: 767px) {
+     .table-header {
+         display: none;
+     }
+     .table-row li {
+         display: block;
+     }
+     .table-row .col {
+         flex-basis: 100%;
+         display: flex;
+         padding: 10px 0;
+     }
+     .table-row .col :before {
+         color: #6C7A89;
+         padding-right: 10px;
+         content: attr(data-label);
+         flex-basis: 50%;
+         text-align: right;
+     }
+ }

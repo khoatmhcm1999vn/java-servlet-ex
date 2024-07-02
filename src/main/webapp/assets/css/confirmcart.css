@@ -1,0 +1,143 @@
+.confirmcart {
+    padding: 120px 0px;
+}
+
+.confirmcart {
+    background-color: #FDF2DE;
+    background-image: none;
+    padding: 110px 0px
+}
+
+.confirmcart h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.confirmcart h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.responsive-table {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px;
+}
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-header {
+    background-color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.col-1 {
+    flex-basis: 30%;
+}
+
+.col-2 {
+    flex-basis: 20%;
+}
+
+.col-3 {
+    flex-basis: 25%;
+}
+
+.col-4 {
+    flex-basis: 25%;
+}
+
+@media all and (max-width: 767px) {
+    .table-header {
+        display: none;
+    }
+    .table-row li {
+        display: block;
+    }
+    .table-row .col {
+        flex-basis: 100%;
+        display: flex;
+        padding: 10px 0;
+    }
+    .table-row .col :before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}
+
+.confirmcart h3 {
+    text-align: center;
+}
+
+.confirmcart a {
+    padding: 10px 30px;
+    margin: 0px auto;
+}
+
+.confirmcart .select {
+    border: none;
+    background-color: white;
+    width: fit-content;
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+.btn {
+    display: inline-block;
+    /* background: transparent; */
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+.btn--primary {
+    
+    background: #7f8ff4;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 12px 36px;
+}
+.btn--primary:hover {
+    background: #6c7ff2;
+}
+.btn--primary:active {
+    background: #7f8ff4;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+.btn--inside {
+    margin-left: -96px;
+}
+.form__field {
+    width: 300px;
+    height: 10px;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+}
