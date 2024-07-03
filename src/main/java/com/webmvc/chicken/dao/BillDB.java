@@ -32,7 +32,6 @@ public class BillDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 
@@ -52,7 +51,6 @@ public class BillDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 
@@ -71,7 +69,6 @@ public class BillDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }

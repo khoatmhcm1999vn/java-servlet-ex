@@ -29,7 +29,6 @@ public class BillItemDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 

@@ -1,11 +1,14 @@
 package com.webmvc.chicken.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "view_product", schema = "public", catalog = "testabc")
-public class ViewProductEntity {
+public class ViewProductEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Basic
     @Column(name = "product_discount")

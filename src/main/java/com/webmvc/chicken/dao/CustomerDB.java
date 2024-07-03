@@ -27,7 +27,6 @@ public class CustomerDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }
@@ -45,7 +44,6 @@ public class CustomerDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }
@@ -64,7 +62,6 @@ public class CustomerDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }
@@ -84,7 +81,6 @@ public class CustomerDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 
@@ -103,7 +99,6 @@ public class CustomerDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 

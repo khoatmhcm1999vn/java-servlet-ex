@@ -1,6 +1,5 @@
 package com.webmvc.chicken.dao;
 
-import com.webmvc.chicken.model.CustomerEntity;
 import com.webmvc.chicken.model.ProductEntity;
 import com.webmvc.chicken.utils.HibernateUtil;
 
@@ -28,7 +27,6 @@ public class ProductDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }
@@ -48,7 +46,6 @@ public class ProductDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 
@@ -67,7 +64,6 @@ public class ProductDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 
@@ -86,7 +82,6 @@ public class ProductDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 

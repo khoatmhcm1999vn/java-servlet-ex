@@ -26,7 +26,6 @@ public class ViewProductDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }
@@ -44,7 +43,6 @@ public class ViewProductDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }

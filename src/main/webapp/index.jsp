@@ -6,7 +6,7 @@
     <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
         <h1>Săn khuyến mãi</h1>
         <h2>Gà rán hiệu ông bà Khoa My</h2>
-        <a href="portfolio.jsp" class="btn-about">Đặt hàng ngay</a>
+        <a href="portfolio" class="btn-about">Đặt hàng ngay</a>
     </div>
 </section>
 <!-- End Hero -->

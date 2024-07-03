@@ -1,11 +1,15 @@
 package com.webmvc.chicken.model;
 
+import com.webmvc.chicken.utils.MyUtil;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class CartEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private List<LineItemEntity> items;
 
@@ -67,6 +71,30 @@ public class CartEntity implements Serializable {
                 return;
             }
         }
+    }
+
+    public Double getSumTotal() {
+        double sumTotal = 0;
+        for (LineItemEntity lineItemEntity : this.items) {
+            sumTotal = sumTotal + lineItemEntity.getTotal();
+        }
+        return sumTotal;
+    }
+
+    public String getSumTotalFormat() {
+        return MyUtil.format(this.getSumTotal());
+    }
+
+    public Double getFinalTotal() {
+        return this.getSumTotal() - this.getDiscountValue();
+    }
+
+    public String getFinalTotalFormat() {
+        return MyUtil.format(this.getFinalTotal());
+    }
+
+    public String getDiscountValueFormat() {
+        return MyUtil.format(this.getDiscountValue());
     }
 
 }

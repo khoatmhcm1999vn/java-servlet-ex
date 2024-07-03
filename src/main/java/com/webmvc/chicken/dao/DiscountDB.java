@@ -26,7 +26,6 @@ public class DiscountDB {
             System.out.println(e.getMessage());
         } finally {
             em.close();
-            emf.close();
         }
         return results;
     }

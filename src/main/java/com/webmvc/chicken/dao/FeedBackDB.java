@@ -28,7 +28,6 @@ public class FeedBackDB {
                 transaction.rollback();
             }
             em.close();
-            emf.close();
         }
     }
 
