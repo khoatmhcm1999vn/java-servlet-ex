@@ -2,7 +2,6 @@ package com.webmvc.chicken.controller;
 
 import com.webmvc.chicken.dao.ViewProductDB;
 import com.webmvc.chicken.model.CartEntity;
-import com.webmvc.chicken.model.CustomerEntity;
 import com.webmvc.chicken.model.LineItemEntity;
 import com.webmvc.chicken.model.ViewProductEntity;
 import com.webmvc.chicken.utils.MyUtil;
@@ -30,23 +29,17 @@ public class Cart extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
 
         String url = "/cart.jsp";
-        HttpSession httpSession = req.getSession();
         String action = req.getParameter("action");
-        CustomerEntity customer = (CustomerEntity) httpSession.getAttribute("customer");
 
-        if (customer == null) {
-            url = "/report.jsp";
-        } else {
-            if (action == null) {
-                action = "details";
-            }
-            if (action.trim().equalsIgnoreCase("details")) {
-                url = this.details(req);
-            } else if (action.equalsIgnoreCase("addToCart")) {
-                url = this.addToDetails(req);
-            } else if (action.equalsIgnoreCase("update")) {
-                url = this.update(req);
-            }
+        if (action == null) {
+            action = "details";
+        }
+        if (action.trim().equalsIgnoreCase("details")) {
+            url = this.details(req);
+        } else if (action.equalsIgnoreCase("addToCart")) {
+            url = this.addToDetails(req);
+        } else if (action.equalsIgnoreCase("update")) {
+            url = this.update(req);
         }
 
         getServletContext().getRequestDispatcher(url).forward(req, resp);

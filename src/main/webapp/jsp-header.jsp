@@ -61,12 +61,12 @@
         <!-- .navbar -->
 
         <div class="header-social-links"  style="display: flex; ">
+            <a href="cart" style="font: 1em sans-serif;">giỏ hàng</a>
             <c:choose>
                 <c:when test="${sessionScope.get('customer') == null}">
                     <a href="sig" style="font: 1em sans-serif;">đăng nhập</a>
                 </c:when>
                 <c:when test="${sessionScope.get('customer') != null}">
-                    <a href="cart" style="font: 1em sans-serif;">giỏ hàng</a>
                     <a href="info" style="font: 1em sans-serif;">Tài khoản</a>
                     <a href="sig?action=logout" style="font: 1em sans-serif;">Thoát</a>
                 </c:when>

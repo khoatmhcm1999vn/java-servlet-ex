@@ -2,13 +2,16 @@ package com.webmvc.chicken.model;
 
 import javax.persistence.*;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import static javax.persistence.GenerationType.AUTO;
 
 @Entity
 @Table(name = "customer", schema = "public", catalog = "testabc")
-public class CustomerEntity {
+public class CustomerEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Id
     @Column(name = "customer_id")

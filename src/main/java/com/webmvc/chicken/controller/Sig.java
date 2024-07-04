@@ -40,7 +40,6 @@ public class Sig extends HttpServlet {
                 if (customer != null) {
                     httpSession.setAttribute("customer", customer);
                     url = "/index.jsp";
-                    System.out.println("đăng nhập thành công");
                 } else {
                     url = "/login.jsp";
                     status = "sai email hoặc mật khẩu";

@@ -95,7 +95,6 @@ public class CheckOut extends HttpServlet {
                         bill.setDiscount(DiscountDB.getDiscountByCode(cart.getDiscountCode()));
                     }
                     BillDB.insert(bill);
-                    System.out.println("luu bill");
 
                     List<LineItemEntity> listLineItem = cart.getItems();
                     for (LineItemEntity lineItemEntity : listLineItem) {
@@ -105,6 +104,7 @@ public class CheckOut extends HttpServlet {
                         item.setProductId(ProductDB.getProductByCode(lineItemEntity.getProduct().getProductCode()));
                         BillItemDB.insert(item);
                     }
+                    httpSession.removeAttribute("cart");
                     url = "/report.jsp";
                     status = "cảm ơn bạn đã sử dụng dịch vụ của chúng tôi";
                     break;

@@ -7,14 +7,6 @@
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>Thực đơn</h2>
-                <p style="display:inline-flex">
-                    <input type="text" name="name" class="form-control" id="search" placeholder="Tìm kiếm" required style="width: 300px;margin-left: auto;
-                    margin-right:auto;">
-                    <a href="" class="linkedin">
-                        <i class="bi bi-search" style="font-size: 20px; color: white; padding: 2px 5px;"></i>
-                    </a>
-                </p>
-                <p></p>
             </div>
 
             <div class="row" data-aos="fade-up" data-aos-delay="100">
